@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Animal Rush Mahziyar Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Estedad:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
+<style>
+:root{--bg:#090909;--panel:#151515;--panel2:#1b120b;--line:#392513;--o:#ff8b18;--g:#ffb84f;--t:#f7f2ec;--m:#aaa29b;--green:#31d88a;--red:#ff5b5b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,#40210b,transparent 32%),var(--bg);color:var(--t);font-family:Estedad,Tahoma,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
+:focus-visible{outline:2px solid var(--g);outline-offset:2px}
+header{position:sticky;top:0;z-index:20;background:#090909e8;backdrop-filter:blur(14px);border-bottom:1px solid #2b1b0e}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{font-weight:900;font-size:18px;display:flex;align-items:center;gap:8px}.brand b{color:var(--g)}.brand i{font-style:normal;font-size:25px}.links{display:flex;gap:5px;flex-wrap:wrap}.links button{border:0;background:transparent;color:#ddd;padding:9px 11px;border-radius:12px}.links button:hover{background:#1b120b}.links .cta{background:linear-gradient(135deg,var(--g),var(--o));color:#160b02;font-weight:900}
+.ann{display:none;background:#2a1808;border-bottom:1px solid #63390f;color:#ffd59e;text-align:center;padding:9px 12px;font-size:14px;line-height:1.9}.ann.show{display:block}
+.hero{padding:35px 0 25px}.heroBox{padding:52px 22px;text-align:center;border-radius:30px;background:linear-gradient(135deg,#ffb73c,#ff5b09);box-shadow:0 25px 70px #0008;overflow:hidden}.hero h1{margin:0 0 10px;font-size:clamp(30px,6vw,58px);font-weight:900}.hero p{margin:0 auto 24px;max-width:650px;color:#fff8ed}.btn{border:0;border-radius:14px;padding:12px 17px;background:linear-gradient(135deg,var(--g),var(--o));color:#180b02;font-weight:900;display:inline-flex;justify-content:center;align-items:center;gap:7px}.btn.dark{background:#21150c;color:#ffb65b;border:1px solid #61360f}.btn.red{background:#541719;color:#ffdada}.btn.full{width:100%}.btn:disabled{opacity:.6;cursor:wait}
+section{padding:25px 0 42px}.head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.title{margin:0;font-size:26px;font-weight:900}.muted{color:var(--m);line-height:2}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(#191919,#111);border:1px solid #2c2c2c;border-radius:22px;padding:21px;box-shadow:0 16px 45px #0005}.benefit h3{color:var(--g);margin:9px 0 6px}.benefit p{margin:0;color:#c5beb7;line-height:2}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.product{position:relative;padding:21px;border-radius:22px;background:linear-gradient(#1d140c,#100d09);border:1px solid #513012}.product:hover{border-color:#a96016;transform:translateY(-3px)}.product{transition:.18s}.coin{font-size:34px}.coins{font-size:23px;font-weight:900;color:#ffb34d}.price{font-size:20px;font-weight:900;margin:8px 0 16px}.status{position:absolute;left:15px;top:15px;border-radius:99px;padding:4px 9px;font-size:12px}.yes{background:#123c2b;color:#73ffc0}.no{background:#481719;color:#ff9999}.disabled{opacity:.62}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.stars{color:#ffb43d;letter-spacing:2px}.review b{display:block;margin-top:8px}.review p{line-height:2;color:#c5beb7}
+footer{text-align:center;color:#817970;border-top:1px solid #25180d;padding:27px 0 35px;margin-top:15px}footer a{color:var(--g);margin-inline-start:12px}
+.overlay{display:none;position:fixed;inset:0;z-index:100;background:#000b;backdrop-filter:blur(7px);align-items:center;justify-content:center;padding:16px}.overlay.show{display:flex}.modal{width:min(580px,100%);max-height:92vh;overflow:auto;background:#111;border:1px solid #4b2d16;border-radius:24px;box-shadow:0 30px 100px #000}.mh{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid #292929}.mh h2{margin:0;font-size:20px}.close{border:0;background:#211a14;color:white;width:38px;height:38px;border-radius:12px;font-size:22px}.mb{padding:20px}.group{margin-bottom:13px}.group label{display:block;margin-bottom:7px;color:#ddd}input,textarea,select{width:100%;background:#080808;color:#fff;border:1px solid #353535;border-radius:12px;padding:11px 12px;outline:0}input:focus,textarea:focus,select:focus{border-color:var(--o)}textarea{min-height:115px;resize:vertical}.notice{background:#21160c;border:1px solid #63390f;border-radius:13px;padding:12px 14px;color:#ffd59e;line-height:2;margin:13px 0}.copy{display:flex;gap:8px}.copy input{direction:ltr;text-align:center;font-weight:900}.account{display:none}.orderList{display:grid;gap:10px}.order{display:grid;grid-template-columns:1.2fr 1fr .8fr auto;gap:10px;align-items:center;background:#111;border:1px solid #2d2d2d;border-radius:16px;padding:13px}.code{color:var(--g);font-weight:900;direction:ltr;text-align:right}.badge{border-radius:99px;padding:5px 8px;font-size:12px;background:#392c10;color:#ffd37b;text-align:center;white-space:nowrap}.badge.done{background:#123c2b;color:#73ffc0}.badge.rejected{background:#481719;color:#ff9999}.empty{text-align:center;border:1px dashed #543514;border-radius:16px;padding:22px;color:#aaa;background:#130d08}.toast{display:none;position:fixed;right:20px;bottom:20px;z-index:200;background:#1c140d;border:1px solid #6a3c0f;border-radius:13px;padding:12px 15px;color:#ffe0b2;max-width:calc(100vw - 40px)}.toast.show{display:block}
+.prev{display:none;max-width:100%;max-height:230px;margin:10px auto 0;border-radius:12px;border:1px solid #353535}
+.kv{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed #2d2d2d}.kv:last-child{border:0}.kv span:first-child{color:var(--m)}
+@media(max-width:820px){.grid,.products,.reviews{grid-template-columns:1fr 1fr}.order{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.nav{padding:10px 0;align-items:flex-start;flex-direction:column}.links{width:100%;overflow:auto}.links button{white-space:nowrap}.heroBox{padding:38px 17px;border-radius:24px}.grid,.products,.reviews{grid-template-columns:1fr}.order{grid-template-columns:1fr}.copy{flex-direction:column}.title{font-size:23px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.product{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home"><i>🪙</i><b>Animal Rush</b>&nbsp;Mahziyar Shop</a>
+  <nav class="links" id="links"></nav>
+</div></header>
+<div class="ann" id="ann"></div>
+
+<main>
+<section id="home"><div class="wrap hero"><div class="heroBox">
+  <h1 id="heroTitle">🪙 ANIMAL RUSH MAHZIYAR SHOP</h1>
+  <p id="heroText">فروش سکه Animal Rush با سفارش آسان، پیگیری سفارش و واریز سریع</p>
+  <button class="btn" onclick="go('shop')">🪙 خرید سکه</button>
+</div></div></section>
+
+<section><div class="wrap">
+  <div class="head"><h2 class="title">⭐ مزایای خرید از فروشگاه</h2></div>
+  <div class="grid">
+    <article class="card benefit"><div style="font-size:31px">💰</div><h3>خیلی ارزان‌تر</h3><p>قیمت بسته‌ها خیلی ارزان‌تر از سایت واقعی بازی در نظر گرفته شده است.</p></article>
+    <article class="card benefit"><div style="font-size:31px">🛡️</div><h3>سکه‌های سالم</h3><p>سکه‌ها طبق روند فروشگاه بررسی می‌شوند و سفارش پس از تأیید پرداخت انجام می‌شود.</p></article>
+    <article class="card benefit"><div style="font-size:31px">⚡</div><h3>واریز زیر ۱۰ دقیقه</h3><p>طبق اعلام فروشگاه، سفارش‌های تأییدشده زیر ۱۰ دقیقه واریز می‌شوند.</p></article>
+  </div>
+</div></section>
+
+<section id="shop"><div class="wrap">
+  <div class="head"><div><h2 class="title">🪙 فروشگاه سکه</h2><div class="muted" id="shopNote">بسته‌ها از ۸K شروع می‌شوند.</div></div></div>
+  <div class="products" id="products"><div class="empty" style="grid-column:1/-1">در حال بارگذاری بسته‌ها...</div></div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="head"><h2 class="title">💬 نظر کاربران</h2><button class="btn dark" onclick="modal('review')">✍️ ثبت نظر</button></div>
+  <div class="reviews" id="reviewsBox"></div>
+</div></section>
+
+<section id="account" class="account"><div class="wrap">
+  <div class="head"><h2 class="title">👤 حساب کاربری</h2><button class="btn dark" onclick="logout()">خروج</button></div>
+  <div class="card"><b id="userName"></b><div class="muted">مدیریت سفارش‌ها و نظرات شما</div></div>
+  <div style="height:15px"></div>
+  <div class="card"><h3>📦 سفارش‌های من</h3><div class="orderList" id="orders"></div></div>
+  <div style="height:15px"></div>
+  <div class="card"><h3>💬 ثبت نظر</h3><div class="group"><label for="arating">امتیاز</label><select id="arating"><option value="5">★★★★★</option><option value="4">★★★★☆</option><option value="3">★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option></select></div><div class="group"><label for="atext">متن نظر</label><textarea id="atext" maxlength="500"></textarea></div><button class="btn" onclick="addReview()">ارسال برای بررسی</button></div>
+</div></section>
+</main>
+
+<div class="overlay" id="login"><div class="modal"><div class="mh"><h2>🔐 ورود به حساب</h2><button class="close" aria-label="بستن" onclick="closeM('login')">×</button></div><div class="mb">
+<div class="group"><label for="lu">نام کاربری</label><input id="lu" autocomplete="username"></div><div class="group"><label for="lp">رمز عبور</label><input id="lp" type="password" autocomplete="current-password"></div><button class="btn full" id="loginBtn" onclick="login()">ورود</button>
+<div class="muted" style="margin-top:12px;text-align:center">حساب ندارید؟ <a href="#" style="color:var(--g)" onclick="event.preventDefault();closeM('login');modal('register')">ثبت‌نام کنید</a></div>
+</div></div></div>
+
+<div class="overlay" id="register"><div class="modal"><div class="mh"><h2>👤 ثبت‌نام</h2><button class="close" aria-label="بستن" onclick="closeM('register')">×</button></div><div class="mb">
+<div class="group"><label for="ru">نام کاربری</label><input id="ru" autocomplete="username" maxlength="24"></div><div class="group"><label for="rp">رمز عبور (حداقل ۸ کاراکتر)</label><input id="rp" type="password" autocomplete="new-password" maxlength="72"></div><button class="btn full" id="regBtn" onclick="register()">ساخت حساب</button>
+</div></div></div>
+
+<div class="overlay" id="pay"><div class="modal"><div class="mh"><h2>💳 پرداخت سفارش</h2><button class="close" aria-label="بستن" onclick="closeM('pay')">×</button></div><div class="mb">
+<div class="notice" id="chosen"></div>
+<div class="group"><label for="gid">آیدی حساب شما در بازی Animal Rush</label><input id="gid" maxlength="40" autocomplete="off" placeholder="سکه‌ها به این آیدی واریز می‌شود"></div>
+<p>مبلغ سفارش را به کارت فروشگاه واریز کنید:</p>
+<div class="copy"><input id="card" value="" readonly aria-label="شماره کارت"><button class="btn dark" onclick="copyCard()">📋 کپی</button></div>
+<div class="muted" id="holder"></div>
+<div class="notice">بعد از واریز، روی «واریز کردم» بزنید و رسید را ارسال کنید.</div>
+<button class="btn full" onclick="toReceipt()">✅ واریز کردم</button>
+</div></div></div>
+
+<div class="overlay" id="receipt"><div class="modal"><div class="mh"><h2>📸 ارسال رسید</h2><button class="close" aria-label="بستن" onclick="closeM('receipt')">×</button></div><div class="mb">
+<div class="notice">تصویر رسید پرداخت را انتخاب کنید. حداکثر حجم: ۵ مگابایت.</div>
+<div class="group"><label for="file">رسید</label><input id="file" type="file" accept="image/jpeg,image/png,image/webp"><img class="prev" id="prev" alt="پیش‌نمایش رسید"></div>
+<button class="btn full" id="sendBtn" onclick="receipt()">📤 ارسال رسید</button>
+</div></div></div>
+
+<div class="overlay" id="result"><div class="modal"><div class="mh"><h2>📦 نتیجه سفارش</h2><button class="close" aria-label="بستن" onclick="closeM('result')">×</button></div><div class="mb">
+<div class="notice" style="text-align:center">🎉 رسید ثبت شد.<br>کد سفارش: <b id="ocode" style="color:#ffb64e"></b></div>
+<div id="osummary"></div><button class="btn full" style="margin-top:12px" onclick="closeM('result');showAccount()">👤 مشاهده حساب کاربری</button>
+</div></div></div>
+
+<div class="overlay" id="detail"><div class="modal"><div class="mh"><h2>🧾 جزئیات سفارش</h2><button class="close" aria-label="بستن" onclick="closeM('detail')">×</button></div><div class="mb" id="detailBody"></div></div></div>
+
+<div class="overlay" id="review"><div class="modal"><div class="mh"><h2>💬 ثبت نظر</h2><button class="close" aria-label="بستن" onclick="closeM('review')">×</button></div><div class="mb">
+<div class="group"><label for="rr">امتیاز</label><select id="rr"><option value="5">★★★★★</option><option value="4">★★★★☆</option><option value="3">★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option></select></div>
+<div class="group"><label for="rt">نظر شما</label><textarea id="rt" maxlength="500"></textarea></div><button class="btn full" onclick="addPublicReview()">ارسال برای بررسی</button>
+</div></div></div>
+
+<div class="toast" id="toast" role="status"></div>
+<footer><span id="footText">© 2026 Animal Rush Mahziyar Shop</span><span id="support"></span></footer>
+
+<script>
+/* ============ تنظیمات اتصال ============ */
+const SUPABASE_URL='https://knnjcxzkdrmkwdbubqol.supabase.co'; // مثال: https://abcdefgh.supabase.co
+const SUPABASE_KEY='sb_publishable_r6U612GE22577klsL5YlAw_OmuTXxwk';
+/* ======================================= */
+
+const mem={};
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return mem[k]??null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){mem[k]=v}},del(k){try{localStorage.removeItem(k)}catch(e){delete mem[k]}}};
+
+async function rpc(name,args){
+ if(!/^https:\/\/[a-z0-9-]+\.supabase\.co\/?$/i.test(SUPABASE_URL))throw new Error('آدرس پروژه Supabase در ابتدای اسکریپت تنظیم نشده است.');
+ let r;
+ try{r=await fetch(SUPABASE_URL.replace(/\/$/,'')+'/rest/v1/rpc/'+name,{method:'POST',headers:{'Content-Type':'application/json',apikey:SUPABASE_KEY},body:JSON.stringify(args||{})})}
+ catch(e){throw new Error('اتصال به سرور برقرار نشد؛ اینترنت یا فیلترشکن را بررسی کنید.')}
+ const txt=await r.text();let j=null;try{j=txt?JSON.parse(txt):null}catch(e){}
+ if(!r.ok){
+  if(r.status===404)throw new Error('دیتابیس هنوز راه‌اندازی نشده؛ فایل setup.sql را در Supabase اجرا کنید.');
+  throw new Error((j&&j.message)||'خطای سرور ('+r.status+')');
+ }
+ return j;
+}
+async function call(name,args){
+ try{return await rpc(name,args)}
+ catch(e){if(/نشست/.test(e.message)&&user){clearSession();updateNav();document.getElementById('account').style.display='none'}throw e}
+}
+
+let S={},products=[],reviews=[],user=store.get('ms_user'),token=store.get('ms_token'),selected=null,wantPay=false,busy=false;
+if(!token)user=null;
+
+const fa=n=>Number(n).toLocaleString('fa-IR'), money=n=>fa(n)+' تومان';
+const fmtDate=d=>new Date(d).toLocaleString('fa-IR',{dateStyle:'medium',timeStyle:'short'});
+const ST={pending:['در حال بررسی',''],done:['تحویل شد','done'],rejected:['رد شد','rejected']};
+function esc(s){return String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[x]))}
+const fmtCard=s=>String(s||'').replace(/\D/g,'').replace(/(.{4})(?=.)/g,'$1 ');
+const shopOpen=()=>S.shop_open!=='0';
+
+function setSession(t,u){token=t;user=u;store.set('ms_token',t);store.set('ms_user',u);updateNav()}
+function clearSession(){token=null;user=null;store.del('ms_token');store.del('ms_user')}
+
+function applySettings(){
+ if(S.site_title)document.title=S.site_title;
+ if(S.hero_title)document.getElementById('heroTitle').textContent=S.hero_title;
+ if(S.hero_text)document.getElementById('heroText').textContent=S.hero_text;
+ if(S.footer_text)document.getElementById('footText').textContent=S.footer_text;
+ const a=document.getElementById('ann');a.textContent=S.announcement||'';a.classList.toggle('show',!!S.announcement);
+ const sp=document.getElementById('support');
+ sp.innerHTML=/^https?:\/\//.test(S.support_link||'')?`<a href="${esc(S.support_link)}" target="_blank" rel="noopener noreferrer">💬 پشتیبانی</a>`:'';
+ document.getElementById('shopNote').textContent=shopOpen()?'بسته‌ها از ۸K شروع می‌شوند.':'⛔ فروش فعلاً متوقف است؛ کمی بعد دوباره سر بزنید.';
+}
+function renderProducts(){
+ const el=document.getElementById('products');
+ if(!products.length){el.innerHTML='<div class="empty" style="grid-column:1/-1">فعلاً بسته‌ای ثبت نشده است.</div>';return}
+ el.innerHTML=products.map(p=>{const ok=p.active&&shopOpen();return`
+ <article class="product ${ok?'':'disabled'}">
+ <span class="status ${ok?'yes':'no'}">${ok?'موجود':'ناموجود'}</span>
+ <div class="coin">🪙</div><div class="coins">${fa(p.coins)} سکه</div><div class="price">${money(p.price)}</div>
+ ${ok?`<button class="btn" onclick="buy(${Number(p.id)})">خرید این بسته</button>`:`<span class="muted">فعلاً ناموجود</span>`}
+ </article>`}).join('');
+}
+function renderReviews(){
+ document.getElementById('reviewsBox').innerHTML=reviews.length?reviews.slice(0,6).map(x=>`
+ <article class="card review"><div class="stars">${'★'.repeat(x.r)}${'☆'.repeat(5-x.r)}</div><b>${esc(x.u)}</b><p>${esc(x.t)}</p></article>`).join(''):'<div class="empty" style="grid-column:1/-1">هنوز نظری ثبت نشده است.</div>';
+}
+async function load(){
+ try{const d=await rpc('ms_get_public');S=d.settings||{};products=d.products||[];reviews=d.reviews||[];applySettings();renderProducts();renderReviews()}
+ catch(e){document.getElementById('products').innerHTML=`<div class="empty" style="grid-column:1/-1">${esc(e.message)}<br><button class="btn dark" style="margin-top:12px" onclick="load()">تلاش دوباره</button></div>`}
+}
+
+function modal(id){document.getElementById(id).classList.add('show')}
+function closeM(id){document.getElementById(id).classList.remove('show')}
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+function toast(t){let x=document.getElementById('toast');x.textContent=t;x.classList.add('show');clearTimeout(window.tt);window.tt=setTimeout(()=>x.classList.remove('show'),3200)}
+function setBusy(id,on,label){const b=document.getElementById(id);if(!b)return;if(on){b.dataset.l=b.textContent;b.textContent=label||'صبر کنید...';b.disabled=true}else{b.textContent=b.dataset.l||b.textContent;b.disabled=false}}
+
+function updateNav(){
+ document.getElementById('links').innerHTML=`
+ <button onclick="go('home')">خانه</button><button onclick="go('shop')">فروشگاه سکه</button><button onclick="go('reviews')">نظرها</button>`+
+ (user?`<button onclick="showAccount()">👤 ${esc(user)}</button><button class="cta" onclick="logout()">خروج</button>`
+      :`<button onclick="modal('login')">ورود</button><button class="cta" onclick="modal('register')">ثبت‌نام</button>`);
+}
+async function afterAuth(){
+ closeM('login');closeM('register');updateNav();
+ if(wantPay&&selected){wantPay=false;openPay()}
+}
+async function login(){
+ if(busy)return;
+ const u=document.getElementById('lu').value.trim(),p=document.getElementById('lp').value;
+ if(u.length<3||!p)return toast('نام کاربری و رمز عبور را وارد کنید.');
+ busy=true;setBusy('loginBtn',true);
+ try{const r=await rpc('ms_login',{p_username:u,p_password:p});
+  if(!r.ok)return toast(r.error);
+  setSession(r.token,r.username);document.getElementById('lp').value='';toast('خوش آمدید '+r.username);afterAuth();
+ }catch(e){toast(e.message)}finally{busy=false;setBusy('loginBtn',false)}
+}
+async function register(){
+ if(busy)return;
+ const u=document.getElementById('ru').value.trim(),p=document.getElementById('rp').value;
+ if(u.length<3||p.length<8)return toast('نام کاربری حداقل ۳ و رمز عبور حداقل ۸ کاراکتر باشد.');
+ busy=true;setBusy('regBtn',true);
+ try{const r=await rpc('ms_register',{p_username:u,p_password:p});
+  setSession(r.token,r.username);document.getElementById('rp').value='';toast('حساب ساخته شد. خوش آمدید!');afterAuth();
+ }catch(e){toast(e.message)}finally{busy=false;setBusy('regBtn',false)}
+}
+function logout(){
+ if(token)rpc('ms_logout',{p_token:token}).catch(()=>{});
+ clearSession();document.getElementById('account').style.display='none';updateNav();go('home');toast('از حساب خارج شدید.');
+}
+
+function buy(id){
+ selected=products.find(x=>x.id===id);
+ if(!selected||!selected.active)return toast('این بسته فعلاً موجود نیست.');
+ if(!shopOpen())return toast('فروش فعلاً متوقف است.');
+ if(!user){wantPay=true;toast('برای خرید ابتدا وارد حساب شوید.');modal('login');return}
+ openPay();
+}
+function openPay(){
+ document.getElementById('chosen').innerHTML=`🪙 <b>${fa(selected.coins)} سکه</b> — <b>${money(selected.price)}</b>`;
+ document.getElementById('card').value=fmtCard(S.card_number);
+ document.getElementById('holder').textContent=S.card_holder?'به نام: '+S.card_holder:'';
+ document.getElementById('gid').value=store.get('ms_gid')||'';
+ modal('pay');
+}
+function copyCard(){
+ const raw=String(S.card_number||'').replace(/\D/g,'');
+ if(navigator.clipboard)navigator.clipboard.writeText(raw).then(()=>toast('شماره کارت کپی شد.'),()=>toast('کپی نشد؛ شماره را دستی کپی کنید.'));
+ else{const i=document.getElementById('card');i.select();document.execCommand('copy');toast('شماره کارت کپی شد.')}
+}
+function toReceipt(){
+ const g=document.getElementById('gid').value.trim();
+ if(g.length<2)return toast('آیدی حساب بازی را وارد کنید.');
+ store.set('ms_gid',g);closeM('pay');modal('receipt');
+}
+document.getElementById('file').addEventListener('change',e=>{
+ const f=e.target.files[0],p=document.getElementById('prev');
+ if(f&&f.type.startsWith('image/')){p.src=URL.createObjectURL(f);p.style.display='block'}else{p.removeAttribute('src');p.style.display='none'}
+});
+function compress(file){
+ return new Promise((res,rej)=>{
+  const img=new Image(),url=URL.createObjectURL(file);
+  img.onload=()=>{
+   let out='',max=1400,q=.78;
+   for(let i=0;i<4;i++){
+    const k=Math.min(1,max/Math.max(img.width,img.height)),c=document.createElement('canvas');
+    c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);
+    const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(img,0,0,c.width,c.height);
+    out=c.toDataURL('image/jpeg',q);if(out.length<2000000)break;max-=250;q-=.12;
+   }
+   URL.revokeObjectURL(url);res(out);
+  };
+  img.onerror=()=>{URL.revokeObjectURL(url);rej(new Error('تصویر رسید خوانده نشد؛ عکس دیگری انتخاب کنید.'))};
+  img.src=url;
+ });
+}
+async function receipt(){
+ if(busy)return;
+ const f=document.getElementById('file').files[0];
+ if(!f)return toast('ابتدا تصویر رسید را انتخاب کنید.');
+ if(!['image/jpeg','image/png','image/webp'].includes(f.type))return toast('فرمت رسید معتبر نیست.');
+ if(f.size>5*1024*1024)return toast('حجم رسید بیشتر از ۵ مگابایت است.');
+ if(!selected||!token)return toast('ابتدا یک بسته انتخاب کنید و وارد حساب شوید.');
+ busy=true;setBusy('sendBtn',true,'در حال ارسال...');
+ try{
+  const data=await compress(f);
+  const gid=document.getElementById('gid').value.trim()||store.get('ms_gid')||'';
+  const r=await call('ms_create_order',{p_token:token,p_product_id:selected.id,p_game_id:gid,p_receipt:data});
+  document.getElementById('ocode').textContent=r.code;
+  document.getElementById('osummary').innerHTML=`<div class="card">🪙 ${fa(r.coins)} سکه<br>💰 ${money(r.price)}<br>🎮 آیدی بازی: <b dir="ltr">${esc(gid)}</b><br>⏳ وضعیت: <b>در حال بررسی رسید</b></div>`;
+  closeM('receipt');modal('result');
+  document.getElementById('file').value='';document.getElementById('prev').style.display='none';
+ }catch(e){toast(e.message)}finally{busy=false;setBusy('sendBtn',false)}
+}
+
+let myOrders=[];
+async function showAccount(){
+ if(!user){modal('login');return}
+ document.getElementById('account').style.display='block';
+ document.getElementById('userName').textContent='سلام، '+user+' 👋';
+ const box=document.getElementById('orders');box.innerHTML='<div class="empty">در حال بارگذاری...</div>';
+ go('account');
+ try{
+  myOrders=await call('ms_my_orders',{p_token:token});
+  box.innerHTML=myOrders.length?myOrders.map((o,i)=>{const s=ST[o.status]||ST.pending;return`
+  <div class="order"><div><div class="code">${esc(o.code)}</div><small class="muted">کد سفارش</small></div><div>🪙 ${fa(o.coins)} سکه<br>${money(o.price)}</div><span class="badge ${s[1]}">${s[0]}</span><button class="btn dark" onclick="orderDetail(${i})">جزئیات</button></div>`}).join(''):'<div class="empty">هنوز سفارشی ندارید.</div>';
+ }catch(e){box.innerHTML=`<div class="empty">${esc(e.message)}</div>`}
+}
+function orderDetail(i){
+ const o=myOrders[i];if(!o)return;const s=ST[o.status]||ST.pending;
+ document.getElementById('detailBody').innerHTML=`
+ <div class="kv"><span>کد سفارش</span><b class="code">${esc(o.code)}</b></div>
+ <div class="kv"><span>بسته</span><b>${fa(o.coins)} سکه</b></div>
+ <div class="kv"><span>مبلغ</span><b>${money(o.price)}</b></div>
+ <div class="kv"><span>آیدی بازی</span><b dir="ltr">${esc(o.game_id)}</b></div>
+ <div class="kv"><span>زمان ثبت</span><b>${fmtDate(o.at)}</b></div>
+ <div class="kv"><span>وضعیت</span><span class="badge ${s[1]}">${s[0]}</span></div>
+ ${o.note?`<div class="notice">📝 پیام فروشگاه: ${esc(o.note)}</div>`:''}`;
+ modal('detail');
+}
+async function sendReview(rId,tId,after){
+ if(!user){after&&after();return modal('login')}
+ const t=document.getElementById(tId).value.trim(),r=+document.getElementById(rId).value;
+ if(t.length<3)return toast('متن نظر را وارد کنید.');
+ try{await call('ms_add_review',{p_token:token,p_rating:r,p_text:t});document.getElementById(tId).value='';toast('نظر برای بررسی ثبت شد.');return true}
+ catch(e){toast(e.message)}
+}
+function addReview(){sendReview('arating','atext')}
+async function addPublicReview(){if(!user){closeM('review');return modal('login')}if(await sendReview('rr','rt'))closeM('review')}
+
+document.querySelectorAll('.overlay').forEach(x=>x.addEventListener('click',e=>{if(e.target===x)x.classList.remove('show')}));
+document.addEventListener('keydown',e=>{
+ if(e.key==='Escape')document.querySelectorAll('.overlay.show').forEach(x=>x.classList.remove('show'));
+ if(e.key==='Enter'&&e.target.tagName==='INPUT'){const f={lu:login,lp:login,ru:register,rp:register}[e.target.id];if(f)f()}
+});
+updateNav();load();
+</script>
+</body>
+</html>
